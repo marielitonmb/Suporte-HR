@@ -190,11 +190,7 @@ def build_treemap_chart(df: pd.DataFrame):
     df_words = df_words.sort_values(by="value", ascending=False).head(40)
     
     # Calcular porcentagens
-    total_filtered_val
-    
-    
-    
-    ue = df_words['value'].sum()
+    total_filtered_value = df_words['value'].sum()
     df_words['percentage'] = (df_words['value'] / total_filtered_value * 100).round(1)
     # Criar coluna formatada para o label
     df_words['label_text'] = df_words['name'] + "<br>" + df_words['value'].astype(str) + " (" + df_words['percentage'].astype(str) + "%)"
